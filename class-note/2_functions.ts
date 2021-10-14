@@ -16,4 +16,13 @@ function sum2(a: number, b: number): number {
 }
 
 // ts의 엄격한 파라미터 제한
-sum2(1, 2, 3, 4);
+// sum2(1, 2, 3, 4);
+
+// 함수의 옵셔널 파라미터 - ?
+function log(a: string, b?: Date): Date {
+  console.log(a);
+  return b;
+}
+
+log('hello world');
+log('hello ts', new Date());
