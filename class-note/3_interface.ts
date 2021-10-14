@@ -51,3 +51,19 @@ const obj: StringRegexDictionary = {
   cssFile: /\.css$/,
   jsFile: /\.js$/,
 };
+
+// 인터페이스 확장
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  language: string;
+}
+
+const charming2: Developer = {
+  name: '박민규',
+  age: 100,
+  language: 'typescript',
+};
