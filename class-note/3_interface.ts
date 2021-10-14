@@ -30,3 +30,13 @@ var sum: SumFunction;
 sum = function(a: number, b: number) {
   return a + b;
 };
+
+// 인덱싱
+interface StringArray {
+  [index: number]: string;
+}
+
+var arr: StringArray = ['j4h', 'A6U', '5nDy', '3VnW', 'KdrIY', '8R1w'];
+// error
+//arr[0] = 10;
+arr[0] = 'hello';
