@@ -43,3 +43,13 @@ function askSomeone(someone: Developer | Person) {
   // => 타입가드로 커버링 가능
 }
 
+function askSomeone2(someone: Developer & Person) {
+  // 인터섹션 연산자는 둘 다 포함된 속성이어야만 에러를 던지지 않는다
+  // someone.name (o)
+  // someone.skill (o)
+  // someone.age (o)
+
+  // => 타입가드로 커버링 가능
+}
+
+
