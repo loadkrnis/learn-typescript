@@ -14,3 +14,6 @@ function add(): number {
 function sum2(a: number, b: number): number {
   return a + b;
 }
+
+// ts의 엄격한 파라미터 제한
+sum2(1, 2, 3, 4);
