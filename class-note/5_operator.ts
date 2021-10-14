@@ -52,4 +52,8 @@ function askSomeone2(someone: Developer & Person) {
   // => 타입가드로 커버링 가능
 }
 
+// 유니온
+askSomeone({ name: 'hello', skill: 'typescript' });
 
+// 인터섹션
+askSomeone2({ name: 'hello', skill: 'typescript', age: 100 });
