@@ -40,3 +40,14 @@ var arr: StringArray = ['j4h', 'A6U', '5nDy', '3VnW', 'KdrIY', '8R1w'];
 // error
 //arr[0] = 10;
 arr[0] = 'hello';
+
+// 딕셔너리 패턴 ***
+interface StringRegexDictionary {
+  [key: string]: RegExp;
+}
+
+const obj: StringRegexDictionary = {
+  something: /abc/,
+  cssFile: /\.css$/,
+  jsFile: /\.js$/,
+};
