@@ -31,8 +31,18 @@ logText3Text('a');
 logText3Number(123);
 
 // 아래와 같은 함수는 text의 타입 추론이 정확히 되지 않았기 때문에
-// 여러 문제가 발생합니다.
+// 해당 타입의 __proto__ 를 사용할 수 없는 점 등 여러 문제가 발생합니다.
 function logTextUnion(text: string | number) {
   console.log(text);
   return text;
 }
+
+function logTextGeneric<T>(text: T): T {
+  console.log(text);
+  return text;
+}
+
+const str = logTextGeneric<string>('typescript');
+str.split('s');
+
+const generic = logTextGeneric<boolean>(true);
