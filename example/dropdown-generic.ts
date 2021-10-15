@@ -39,3 +39,17 @@ emails.forEach(function(email) {
 numberOfProducts.forEach(product => {
   const item = createDropdownItem(product);
 });
+
+interface Dropdown {
+  value: string;
+  selected: boolean;
+}
+
+const obj: Dropdown = { value: 'hello', selected: false };
+
+interface Dropdown2<T> {
+  value: T;
+  selected: boolean;
+}
+
+const obj2: Dropdown2<string> = { value: 'typescript', selected: false };
