@@ -66,3 +66,35 @@ interface Dropdown2<T> {
 }
 
 const obj2: Dropdown2<string> = { value: 'typescript', selected: false };
+
+// 제네릭의 타입 제한
+function logTextLength<T>(text: T[]): T[] {
+  return text;
+}
+
+logTextLength<string>(['asd', 'dsa']);
+
+// 제네릭의 타입 제한 2 - 정의된 타입 이용하기
+interface LengthType {
+  length: number;
+}
+
+function logTextLength2<T extends LengthType>(text: T): number { // extends 하여 length가 포함되어 있는 타입을 제한
+  return text.length;
+}
+
+logTextLength2('a');
+
+// 제네릭의 타입 제한 3 - keyof
+interface ShoppingItem {
+  name: string;
+  price: number;
+  stock: number;
+}
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+  return itemOption;
+}
+
+getShoppingItemOption('price');
+getShoppingItemOption('stock');
