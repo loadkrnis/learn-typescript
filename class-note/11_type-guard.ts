@@ -13,7 +13,7 @@ function introduce(): Developer | Person {
 }
 
 var tony = introduce();
-console.log(tony.skill); // error
+// console.log(tony.skill); // error
 
 if ((tony as Developer).skill) {
   let skill = (tony as Developer).skill;
